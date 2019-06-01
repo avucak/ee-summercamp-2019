@@ -64,7 +64,8 @@ body {
 
 .images
 {
-  margin-top:200px;
+  padding-top:200px;
+  
 }
 .images__buttons
 {
@@ -73,7 +74,6 @@ body {
   color: white;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
   width: 10%;
   display: block;
   margin: auto;
@@ -81,8 +81,8 @@ body {
 
 .images__input
 {
-  margin-left:530px;
-  margin-bottom: 10px;
+  margin : auto;
+  display: block;
   background-color:	#30333A;
   border: 3px solid #22252E;
   color: white;
@@ -101,5 +101,7 @@ body {
 
 .images__text
 {
-  margin-left: 535px;
+  margin: auto;
+  display: block;
+  text-align: center;
 }
