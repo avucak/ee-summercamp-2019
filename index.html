@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Steganografija</title>
+	<meta charset="UTF-8" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./src/styles.css">
+</head>
+
+<body>
+	<div class="definition">
+		<div class="definition__title">
+			<span>STE</span>
+			<span>GANO</span>
+			<span>GRAF</span>
+			<span>IJA</span>
+		</div>
+		<div class="definition__text">
+			<p>tehnika skrivanja tajnih informacija u datoteke, poruke, slike ili video. 
+					Cilj je prikriti podatke tako da bude nevidljivo da tajna poruka uopće postoji.</p>
+		</div>
+	</div>
+	<div class="lsb">
+		<div class="lsb__text">
+			<div class="lsb__text__title">
+				<p>Least Significant Bit metoda</p>
+			</div>
+			<div class="lsb__text_content">
+				<p>
+						Skrivanje informacija u slici može se postići izmjenom jednog ili više bitova najmanjeg značaja. 
+						Ako su crvena, zelena i plava boja predstavljene pomoću 8 bitova, izmjenom posljednja dva bita 
+						doći će do promjene nijansi koje ljudsko oko vjerojatno neće primjetiti. LSB metoda je 
+						jedan od najčešćih oblika digitalne steganografije. Ovdje implementirani
+						algoritam u zadnja dva bita originalne slike postavlja prva dva, najznačajnija, bita tajne slike.
+						Rezultat je slika koja se ne razlikuje puno od originalne, ali u sebi nosi informacije o tajnoj slici.
+				</p>
+			</div>
+		</div>
+		<div class="lsb__example">
+			<span class="lsb__example__line">originalna slika: &nbsp</span><span  class="lsb__example__line" style="color:#B0B0B0"> 10011011</span><br />
+			<span class="lsb__example__line">tajna slika: &nbsp</span><span  class="lsb__example__line"> 10111001</span><br />
+			<span class="lsb__example__line">rezultat:  &nbsp</span><span  class="lsb__example__line" style="color:#B0B0B0"> 100110</span><span  class="lsb__example__line">10</span><br />
+			<span class="lsb__example__line">otkrivanje tajne slike: &nbsp</span><span  class="lsb__example__line"> 10</span><span  class="lsb__example__line" style="color:#101010;font-weight:bold">000000</span>
+		</div>
+	</div>
+	<div class="images">
+	<p class="images__text">Prvo odaberite fotografiju u koju želite sakriti (original):</p>
+
+	<input type="file" id="ucitaj" title=" " class="images__input"/> <br />
+	<canvas id="canvas" class="images__canvas"></canvas> <br />
+
+ 	<p class="images__text">Zatim odaberite fotografiju koju želite sakriti (tajna):</p>
+	<input type="file" id="ucitajTajnu" class="images__input"/> <br />
+	<canvas id="canvas2" class="images__canvas"></canvas> <br />
+	<button id="sakrij" class="images__buttons">Sakrij</button> <br />
+	<canvas id="canvasRezultat" class="images__canvas"></canvas> <br />
+	<button id="otkrij" class="images__buttons">Otkrij</button> <br />
+	<canvas id="canvasOtkrij" class="images__canvas"></canvas> <br />
+	<script src="src/index.js"></script>
+	</div>
+</body>
+
+</html>

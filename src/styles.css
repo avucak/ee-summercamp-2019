@@ -1,0 +1,105 @@
+body {
+  font-family: 'Montserrat',sans-serif;
+  
+  background-image: url("shattered-island.gif");
+  background-repeat: repeat;
+  background-attachment:fixed;
+  
+  color:white;
+}
+
+.definition
+{
+  display : flex;
+  width: 60%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.definition__title
+{
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  margin: 10px;
+  font-size: 40px;
+}
+
+.definition__text
+{
+  text-align: center;
+  margin: 35px 60px;
+  padding-top: 40px;
+}
+
+.lsb
+{
+  margin-top: 100px;
+  display: flex;
+  text-align : center;
+}
+
+.lsb__text
+{
+  margin-left: 60px;
+  width : 50%;
+}
+
+.lsb__text__title
+{
+  font-size: 25px;
+}
+
+.lsb__example
+{
+  padding-top: 70px;
+  width : 60%;
+}
+
+.lsb__example__line
+{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.images
+{
+  margin-top:200px;
+}
+.images__buttons
+{
+  background-color:	#30333A;
+  border: 3px solid #22252E;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 10%;
+  display: block;
+  margin: auto;
+}
+
+.images__input
+{
+  margin-left:530px;
+  margin-bottom: 10px;
+  background-color:	#30333A;
+  border: 3px solid #22252E;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 25%;
+}
+
+.images__canvas {
+  display: block;
+  padding: 0;
+  outline: #22252E 3px solid;
+  margin: auto;
+}
+
+.images__text
+{
+  margin-left: 535px;
+}
